@@ -128,9 +128,12 @@ img {
     color: var(--header-text-color);
 }
 
-.section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+.title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 .header {
@@ -180,16 +183,20 @@ img {
     margin-left: 50px;
 }
 
-.contact-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.contacts-item {
+.contacts-list {
     display: inline-flex;
     flex-wrap: wrap;
+    text-align: center;
+    align-items: center;
+}
+
+.contact-link {
+    display: flex;
+    align-items: center;
+}
+
+.team .icon {
+    align-items: center;
 }
 
 .contacts-item .icon-envelope {
@@ -266,13 +273,44 @@ background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 
     background-size: cover;
 }
 */
-.feature {
+
+/* FEATURES */
+
+.features {
     padding-top: 94px;
     display: flex;
 }
 
-.feature-item {
+.features-item {
     --grid-item: 4;
+}
+
+.features-item::before {
+    display: block;
+    content: '';
+    width: 270px;
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+    background-color: var(--grey-background-color);
+    margin-bottom: 30px;
+}
+
+.icon-antenna::before {
+    background-image: url('../images/icon/features-icon/icon-antenna.svg');
+}
+
+.icon-clock::before {
+    background-image: url('../images/icon/features-icon/icon-clock.svg');
+}
+
+.icon-diagram::before {
+    background-image: url('../images/icon/features-icon/icon-diagram.svg');
+}
+
+.icon-astronaut::before {
+    background-image: url('../images/icon/features-icon/icon-astronaut.svg');
 }
 
 .features-title {
@@ -289,12 +327,14 @@ background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 
     color: var(--main-text-color);
 }
 
-.benefits-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    padding-bottom: 50px;
+/* BENEFITS */
+
+.benefits {
+    padding-top: 94px;
+    padding-bottom: 103px;
+}
+
+.benefits .title {
     margin-bottom: -30px;
 }
 
@@ -302,16 +342,15 @@ background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 
     --grid-item: 3;
 }
 
+/* TEAM */
+
 .team {
+    padding-top: 76px;
+    padding-bottom: 112px;
     background-color: var(--grey-background-color);
 }
 
-.team-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    padding-bottom: 50px;
+.team .title {
     margin-bottom: -30px;
 }
 
@@ -378,6 +417,53 @@ background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 
 .social-icons-link:focus .icon {
     fill: var(--white-text-color);
 }
+
+/* CLIENTS */
+
+.clients {
+    padding-top: 85px;
+    padding-bottom: 178px;
+}
+
+.clients-list {
+    display: flex;
+}
+
+.clients-item {
+    width: calc((100% - 5 * 30px) / 6);
+    margin-top: -30px;
+}
+
+.clients-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    width: 100%;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    border: 1px solid var(--accent-color);
+}
+
+.clients-logo {
+    fill: #afb1b8;
+}
+
+.clients-link:hover .clients-logo,
+.clients-link:focus .clients-logo {
+    fill: var(--accent-color);
+}
+
+/* FOOTER */
+
 .footer {
     display: flex;
     padding-top: 60px;
@@ -469,6 +555,14 @@ background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 
     margin-bottom: 30px;
 }
 
+.portfolio-element:hover,
+.portfolio-element:focus {
+    background: var(--white-text-color);
+    border: 1px solid #eeeeee;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .portfolio-element:nth-child(3n) {
     margin-right: 0;
 }
@@ -503,6 +597,8 @@ background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 
 .filter-button:focus {
     background-color: var(--accent-color);
     color: var(--white-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
 }
 
 .card-content {
