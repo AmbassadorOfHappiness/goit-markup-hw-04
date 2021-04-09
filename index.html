@@ -18,7 +18,7 @@
         <nav class="navigation">
           <a class="link logo" href="index.html">Web<span class="header-logo">Studio</span></a>
           <ul class="list menu">
-            <li class="menu-item"><a class="link menu-link" href="">Студия</a></li>
+            <li class="menu-item"><a class="link menu-link current" href="">Студия</a></li>
             <li class="menu-item"><a class="link menu-link" href="./portfolio.html">Портфолио</a></li>
             <li class="menu-item"><a class="link menu-link" href="">Контакты</a></li>
           </ul>
@@ -45,8 +45,8 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-          <button type="button" class="link button" href="">Заказать услугу</button>
-        </div>
+          <button type="button" class="link button" href="" data-modal-open>Заказать услугу</button>
+        </div>     
       </section> 
       <section class="features">
         <div class="container">
@@ -78,16 +78,25 @@
               <img src="./images/benefits/box_1.jpg" 
               alt="close-up-image-programer-working-his-desk-office"
               width="370"/>
+              <div class="benefits-actions">
+                <h3 class="benefits-content">Десктопные приложения</h3>
+              </div>
             </li>
             <li class="grid-item benefits-item">
               <img src="./images/benefits/box_2.jpg" 
               alt="web-ui-designers-are-developing-application-smartphones-team-creators-is-working-interface-mobile-phones"
               width="370"/>
+              <div class="benefits-actions">
+                <h3 class="benefits-content">Мобильные приложения</h3>
+              </div>
             </li>
             <li class="grid-item benefits-item">
               <img src="./images/benefits/box_3.jpg"
                 alt="creative-artist-web-design-with-working-colour-selection-graphic-tablet"
                 width="370"/>
+                <div class="benefits-actions">
+                  <h3 class="benefits-content">Дизайнерские решения</h3>
+                </div>
             </li>
           </ul>
         </div>
@@ -352,6 +361,17 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close" data-modal-close>
+          <svg class="icon-cross">
+            <use href="./images/icon/sprite.svg#icon-cross"></use>
+          </svg>
+        </button>
+        <p class="modal-title">заказать услугу</p>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
  </body>
 </html>
 
